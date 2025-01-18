@@ -37,7 +37,7 @@ Por que usar? Melhora a experiência do usuário, permitindo continuar digitando
 function criaBotaoApagar(li) {
     li.innerText += ' ';
     const botaoApagar = document.createElement('button');
-    botaoApagar.innerText = 'Apagar';
+    botaoApagar.innerText = 'Concluido';
     botaoApagar.setAttribute('class', 'apagar');
     botaoApagar.setAttribute('title', 'Apagar esta tarefa');
     li.appendChild(botaoApagar);

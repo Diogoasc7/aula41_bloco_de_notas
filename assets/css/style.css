@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
 
 :root {
-    --primary-color: rgb(11, 89, 134);
+    --primary-color: pink;
     --primary-color-darker: rgb(6, 52, 78);
 }
 
@@ -14,18 +14,51 @@
 body {
     margin: 0;
     padding: 0;
-    background: var(--primary-color)
+    background: var(--primary-color);
 }
 
 .container {
     margin: 50px auto;
-    background-color: white;
+    background-color: rgb(255, 128, 149);
     max-width: 640px;
     padding: 20px;
     font-family: 'Open sans', sans-serif;
     font-size: 1.3em;
     line-height: 1.5em;
     border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+
+p {
+    text-align: center;
+}
+
+.input-tarefa {
+    padding: 8px;
+    border-color: rgb(255, 142, 160);
+}
+
+.btn-tarefa {
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 3px solid;
+    border-color: rgb(255, 142, 160);
+    background-color: white;
+    color: rgb(255, 83, 112);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-tarefa:hover, .apagar:hover {
+    background-color: white;
+    border-color: rgb(168, 168, 168);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 form input, form label, form button {
@@ -39,8 +72,9 @@ form input {
     height: 50px;
     padding: 0 7px;
 }
+
 form input:focus {
-    outline: 1px solid var(--primary-color) ;
+    outline: 1px solid var(--primary-color);
 }
 
 form button {
@@ -56,4 +90,85 @@ form button {
 
 form button:hover {
     background: var(--primary-color-darker);
+}
+
+.apagar {
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 3px solid;
+    border-color: rgb(255, 142, 160);
+    background-color: white;
+    color: rgb(255, 83, 112);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+li {
+    font-weight: bold;
+    color: white;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
+        font-size: 1.1em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    form input {
+        font-size: 20px;
+        height: 45px;
+    }
+
+    form button {
+        font-size: 16px;
+        height: 45px;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 95%;
+        margin: 20px auto;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .input-tarefa {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .btn-tarefa, .apagar {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    form input {
+        font-size: 16px;
+        height: 40px;
+    }
+
+    form button {
+        font-size: 14px;
+        height: 40px;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
 }
